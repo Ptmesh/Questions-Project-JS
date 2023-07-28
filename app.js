@@ -17,6 +17,14 @@ qNs.forEach((question) => {
   const btN = question.querySelector('.question-btn');
 
   btN.addEventListener("click", () => {
+
+        qNs.forEach((item)=>{
+            if (item!== question) {
+                item.classList.remove("show-text");
+            }
+        })
+
+
     question.classList.toggle("show-text");
   });
 });
